@@ -3,6 +3,11 @@ module ActiveRecord
     module ShoppingCart
       module Collection
         #
+        # Sets "per currency" localization
+        #
+        Money.locale_backend = :currency
+
+        #
         # Adds a product to the cart
         #
         def add(object, price, quantity = 1, cumulative = true)
